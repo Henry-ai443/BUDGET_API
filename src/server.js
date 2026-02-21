@@ -25,6 +25,11 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/transactions', transactionsRoutes);
 app.use('/api/insights', insightsRoutes);
 
+//HEaLTH ROUTE
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ message: "API is healthy" });
+});
+
 // error handler (last)
 app.use(errorHandler);
 
